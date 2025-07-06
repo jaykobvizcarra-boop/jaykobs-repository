@@ -1,0 +1,184 @@
+<!-- styles.css -->
+/* Reset default browser margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body settings: font and background */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fff7e1; /* Light cream background */
+  color: #1a1a1a;           /* Dark text for readability */
+}
+
+/* Container to center content and limit width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header and navigation styles */
+header {
+  background-color: #ffffff;
+  padding: 6px 0; /* Reduced padding for a shorter bar */
+  /* was: padding: 15px 0; */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Updated nav-links for even spacing and alignment --- */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Align items vertically */
+  gap: 0; /* Remove gap so we can use space-between */
+  /* Make nav-links take up all available space to spread out items */
+  width: 100%;
+  max-width: 600px; /* Limit how far links can spread */
+  justify-content: space-between; /* Spread links and button evenly */
+  margin-left: 40px; /* Add space between logo and links */
+  /* You can adjust max-width and margin-left as needed */
+}
+/* Make each nav link and the button take equal width */
+.nav-links li {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center each link/button in its space */
+  align-items: center;
+}
+/* Make the button fill its space and align with links */
+.btn-give {
+  background-color: #ffd100; /* Brand yellow button */
+  color: #1a1a1a;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 120px; /* Prevent button from getting too wide */
+  text-align: center;
+}
+
+/* Navigation links styles */
+.nav-links a {
+  text-decoration: none; /* No underline */
+  color: #1a1a1a;        /* Black text */
+  font-weight: normal;   /* Use normal font weight (default) */
+  font-family: inherit;  /* Use the same font as the rest of the page */
+  /* Removed bold and blue color */
+}
+
+/* Hero section with two columns: text and image */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px 0;
+}
+.hero-text {
+  flex: 1;
+  padding: 20px;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+.hero-text .btn {
+  background: none; /* Remove background color */
+  color: #ffd100;   /* Yellow text */
+  padding: 0;       /* Remove padding */
+  border: none;     /* Remove border */
+  border-radius: 0; /* Remove border radius */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom: 3px solid #ffd100; /* Add yellow underline */
+  transition: color 0.2s, border-bottom 0.2s;
+}
+.hero-text .btn:hover {
+  color: #1a1a1a; /* On hover, text turns dark */
+  border-bottom: 3px solid #1a1a1a; /* Underline turns dark */
+}
+.hero-image {
+  flex: 1;
+  padding: 20px;
+}
+.hero-image img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* --- Added for transparent box around hero text --- */
+.hero-box {
+  background-color: rgba(255, 255, 255, 0.35); /* White with 35% opacity */
+  padding: 30px;
+  border-radius: 10px;
+  /* Optional: add a subtle box shadow for better visibility */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  /* Add margin to separate from image on small screens */
+  margin-bottom: 20px;
+}
+/* --- End of addition --- */
+
+/* Impact section: image gallery */
+.impact-images {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.impact-images img {
+  flex: 1;
+  min-width: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Call-to-action section under gallery */
+.cta-section {
+  background-color: #fed8c1; /* Soft peach background */
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+.cta-section .btn {
+  background-color: #ffd100;
+  color: #1a1a1a;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .impact-images {
+    flex-direction: column;
+  }
+}
